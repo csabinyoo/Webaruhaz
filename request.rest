@@ -17,3 +17,14 @@ Content-Type: application/json
 
 ### delete products by id
 delete http://localhost:3000/products/e8vxk41mslda2dm0y
+
+### put products by id
+put http://localhost:3000/products/apcj1q8lbfnah5m
+Content-Type: application/json
+
+{
+    "name": "Á1",
+    "quantity": 24,
+    "price": 2500,
+    "type": "tejtermék"
+}
