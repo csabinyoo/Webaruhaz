@@ -30,3 +30,12 @@ app.listen(port, ()=> {
 
 # Adatszerkezet
 - Branch: `Read_Products(tanár úrnál: Adatszerkezet)`
+```json
+product = {
+    "id": "string",
+    "name": "string",
+    "quantity": "int",
+    "price": "number",
+    "type": "string"
+}
+```
