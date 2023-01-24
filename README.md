@@ -42,3 +42,10 @@ product = {
 
 # 3 get, filesystem
 - Branch: `03_Get_FileSystem`
+```rest
+### get products
+get http://localhost:3000/products
+
+### get products by id
+get http://localhost:3000/products/apcj6tclbfhqung3
+```
