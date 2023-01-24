@@ -1,9 +1,15 @@
 const express = require('express')
 const app = express()
 let port = 3000
+const fs = require('fs');
+
+const dataFile = "./data/products.json"
 
 app.get('/products', function (req, res) {
-  res.send('Hello World')
+  fs.readFile(dataFile, (error, data) => {
+    let products = data;
+    res.send(products)
+  })
 })
 
 app.listen(port, ()=> {
