@@ -29,7 +29,7 @@ app.listen(port, ()=> {
 ```
 
 # Adatszerkezet
-- Branch: `Read_Products(tanár úrnál: Adatszerkezet)`
+- Branch: `02_Read_Products(tanár úrnál: Adatszerkezet)`
 ```json
 product = {
     "id": "string",
@@ -39,3 +39,6 @@ product = {
     "type": "string"
 }
 ```
+
+# 3 get, filesystem
+- Branch: `03_Get_FileSystem`
