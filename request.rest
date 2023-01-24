@@ -1,11 +1,11 @@
 ### get products
-get http://localhost:3000/products
+get http://localhost:3000/products/
 
 ### get products by id
 get http://localhost:3000/products/apcj6tclbfhqung3
 
 ### post products
-post http://localhost:3000/products
+post http://localhost:3000/products/
 Content-Type: application/json
 
 {
