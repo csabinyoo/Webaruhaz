@@ -2,7 +2,7 @@
 
 ## projekt inicializálása
 `npm init -y`
-d
+
 ## Telepítendő modulok
 
 - npm i --save express  
