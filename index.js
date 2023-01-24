@@ -18,7 +18,6 @@ app.get('/products', function (req, res) {
 
 app.get('/products/:id', function (req, res) {
   const id = req.params.id;
-  console.log(id);
   fs.readFile(dataFile, (error, data) => {
     let products = JSON.parse(data);
     const productById = products.find(product => product.id === id);
@@ -32,7 +31,7 @@ app.get('/products/:id', function (req, res) {
     }
     res.send(productById)
   })
-})
+});
 
 app.post('/products', function (req, res) {
   const body = req.body;
@@ -55,6 +54,29 @@ app.post('/products', function (req, res) {
       res.send(newProduct);
     });
   });
+});
+
+app.delete('/products/:id', function (req, res) {
+  const id = req.params.id;
+  fs.readFile(dataFile, (error, data) => {
+    let products = JSON.parse(data);
+    const productIndexById = products.findIndex(product => product.id === id);
+    if (productIndexById === -1) {
+      let message = {
+        error: `Not found id: ${id}`
+      }
+      res.status(404);
+      res.send(message);
+      return
+    }
+    // Törli amit kell
+    products.splice(productIndexById, 1);
+    // Visszaírjuk
+    products = JSON.stringify(products);
+    fs.writeFile(dataFile, products, (error) => {
+      res.send({id: id});
+    });
+  })
 });
 
 app.listen(port, ()=> {

@@ -14,3 +14,6 @@ Content-Type: application/json
     "price": 6500,
     "type": "fémáru"
 }
+
+### delete products by id
+delete http://localhost:3000/products/e8vxk41mslda2dm0y
