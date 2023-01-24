@@ -1,3 +1,5 @@
 ### get products
 get http://localhost:3000/products
 
+### get products by id
+get http://localhost:3000/products/apcj6tclbfhqung
