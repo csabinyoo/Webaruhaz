@@ -9,6 +9,7 @@ const dataFile = "./data/products.json"
 
 // Middleware
 app.use(express.json());
+// statikus tartalmak kiszolgálása
 app.use('/public', express.static('public'));
 
 // get home
