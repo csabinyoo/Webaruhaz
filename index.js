@@ -9,19 +9,13 @@ const dataFile = "./data/products.json"
 
 // Middleware
 app.use(express.json());
+app.use('/public', express.static('public'));
 
 // get home
 app.get('/', function(req, res){
   res.sendFile(path.join(__dirname, "./frontend/index.html"));
 });
 
-app.get('/my.js', function(req, res){
-  res.sendFile(path.join(__dirname, "./frontend/my.js"));
-});
-
-app.get('/my.css', function(req, res){
-  res.sendFile(path.join(__dirname, "./frontend/my.css"));
-});
 
 app.get('/products', function (req, res) {
   fs.readFile(dataFile, (error, data) => {
