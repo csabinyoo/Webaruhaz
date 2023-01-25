@@ -1,3 +1,4 @@
+console.log();
 const url = "http://localhost:3000/products/"
 
 fetch(url)
