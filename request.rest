@@ -1,3 +1,6 @@
+### get honlap
+get http://localhost:3000/
+
 ### get products
 get http://localhost:3000/products/
 

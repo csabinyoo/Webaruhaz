@@ -2,12 +2,22 @@ const express = require('express')
 const app = express()
 let port = 3000
 const fs = require('fs');
+const path = require('path');
 const uniqid = require('uniqid');
 
 const dataFile = "./data/products.json"
 
 // Middleware
 app.use(express.json());
+
+// get home
+app.get('/', function(req, res){
+  res.sendFile(path.join(__dirname, "./frontend/index.html"));
+});
+
+app.get('/my.js', function(req, res){
+  res.sendFile(path.join(__dirname, "./frontend/my.js"));
+});
 
 app.get('/products', function (req, res) {
   fs.readFile(dataFile, (error, data) => {
