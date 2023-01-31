@@ -1,4 +1,3 @@
-console.log("frontend: heló");
 const url = "http://localhost:3000/products/"
 
 
