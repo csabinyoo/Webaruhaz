@@ -1,23 +1,37 @@
 [
   {
     "id": "apcj6tclbfhqung",
-    "name": "Á22",
-    "quantity": 24,
-    "price": 2500,
+    "name": "Á1",
+    "quantity": 10,
+    "price": 1500,
     "type": "tejtermék"
   },
   {
     "id": "apcjbuglbfhs62f",
     "name": "Á2",
-    "quantity": 24,
+    "quantity": 20,
     "price": 2500,
-    "type": "tejtermék"
+    "type": "fémáru"
   },
   {
     "id": "apcj1q8lbfnah5m",
-    "name": "Á1",
-    "quantity": 24,
-    "price": 2500,
-    "type": "tejtermék"
+    "name": "Á3",
+    "quantity": 30,
+    "price": 3500,
+    "type": "gyümölcs"
+  },
+  {
+    "id": "dasjh34j3bfsdgf",
+    "name": "Á4",
+    "quantity": 40,
+    "price": 4500,
+    "type": "desszert"
+  },
+  {
+    "id": "h4j65j3n4bfe74d",
+    "name": "Á5",
+    "quantity": 50,
+    "price": 5500,
+    "type": "hal"
   }
 ]

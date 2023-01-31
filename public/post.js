@@ -1,12 +1,11 @@
 const url = "http://localhost:3000/products/"
 
 async function postProduct(){
-    console.log("post");
     let body = {
-        name: "Á10",
-        quantity: 99,
-        price: 6500,
-        type: "fémáru"
+        name: document.getElementById("name").value,
+        quantity: +document.getElementById("quantity").value,
+        price: +document.getElementById("price").value,
+        type: document.getElementById("type").value
     }
 
     body = JSON.stringify(body);
