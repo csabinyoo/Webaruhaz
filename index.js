@@ -20,9 +20,6 @@ app.get('/', function(req, res){
   res.sendFile(path.join(__dirname, "./frontend/index.html"));
 });
 
-
-
-
 app.get('/products', function (req, res) {
   fs.readFile(dataFile, (error, data) => {
     let products = JSON.parse(data);
