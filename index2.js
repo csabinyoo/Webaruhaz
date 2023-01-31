@@ -14,7 +14,7 @@ app.use('/public', express.static('public'));
 
 // get home
 app.get('/', function(req, res){
-  res.sendFile(path.join(__dirname, "./frontend/index.html"));
+  res.sendFile(path.join(__dirname, "./frontend/post.html"));
 });
 
 
