@@ -23,7 +23,7 @@ app.get('/', function(req, res){
 
 
 
-app.get('/products', cors(), function (req, res) {
+app.get('/products', function (req, res) {
   fs.readFile(dataFile, (error, data) => {
     let products = JSON.parse(data);
     res.send(products)
