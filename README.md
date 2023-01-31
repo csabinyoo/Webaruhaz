@@ -49,3 +49,8 @@ get http://localhost:3000/products
 ### get products by id
 get http://localhost:3000/products/apcj6tclbfhqung3
 ```
+
+# 8. cors
+[What is the CORS Policy](https://www.section.io/engineering-education/what-is-cors-policy/)
+ 
+[How to use CORS in Node.js with Express](https://www.section.io/engineering-education/how-to-use-cors-in-nodejs-with-express/)
