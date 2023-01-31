@@ -1,26 +1,31 @@
+console.log("frontend: heló");
 const url = "http://localhost:3000/products/"
+
 
 async function getProducts(){
     let response = await fetch(url);
     let data = await response.json();
     console.log(data);
-};
-getProducts();
+}
 
 async function postProduct(){
+    console.log("post");
     let body = {
-        name: "Á66",
-        quantity: 24,
+        name: "Á10",
+        quantity: 99,
         price: 6500,
         type: "fémáru"
     }
-    let response = await fetch (url, {
-        Method: 'POST',
-        Headers: {
-            Accept: 'application.json',
-            'Content-Type': 'appliaction/json'
+
+    body = JSON.stringify(body);
+    
+    let response = await fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
         },
-        Body: body,
-        Cache: 'default'
-    })
-};
+        body: body
+      })
+}
+
+getProducts();
