@@ -12,7 +12,7 @@ const dataFile = "./data/products.json"
 app.use(express.json());
 // statikus tartalmak kiszolgálása
 app.use('/public', express.static('public'));
-// Engedélyezi az összes szervernek az adatokat
+
 app.use(cors());
 
 // get home
