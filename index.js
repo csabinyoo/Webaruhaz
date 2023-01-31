@@ -4,6 +4,7 @@ let port = 3000;
 const fs = require('fs');
 const path = require('path');
 const uniqid = require('uniqid');
+const cors = require('cors');
 
 const dataFile = "./data/products.json"
 
@@ -11,11 +12,15 @@ const dataFile = "./data/products.json"
 app.use(express.json());
 // statikus tartalmak kiszolgálása
 app.use('/public', express.static('public'));
+// Engedélyezi az összes szervernek az adatokat
+app.use(cors());
 
 // get home
 app.get('/', function(req, res){
   res.sendFile(path.join(__dirname, "./frontend/index.html"));
 });
+
+
 
 
 app.get('/products', function (req, res) {
