@@ -5,6 +5,7 @@ const fs = require('fs');
 const path = require('path');
 const uniqid = require('uniqid');
 const cors = require('cors');
+const sanitizeHtml = require('sanitize-html');
 
 const dataFile = "./data/products.json"
 
@@ -52,10 +53,10 @@ app.post('/products', function (req, res) {
 
   const newProduct = {
     id: uniqid(),
-    name: body.name,
-    quantity: body.quantity,
-    price: body.price,
-    type: body.type
+    name: sanitizeHtml(body.name),
+    quantity: +sanitizeHtml(body.quantity),
+    price: +sanitizeHtml(body.price),
+    type: sanitizeHtml(body.type)
   }
 
   fs.readFile(dataFile, (error, data) => {
@@ -109,10 +110,10 @@ app.put("/products/:id", (req, res) => {
       }
       const updatedProduct = {
           id: id,
-          name: req.body.name,
-          quantity: Number(req.body.quantity),
-          price: Number(req.body.price),
-          type: req.body.type,
+          name: sanitizeHtml(body.name),
+          quantity: +sanitizeHtml(body.quantity),
+          price: +sanitizeHtml(body.price),
+          type: sanitizeHtml(body.type)
         };
       products[productIndexById] = updatedProduct;
       fs.writeFile(dataFile, JSON.stringify(products), (error, data)=>{
