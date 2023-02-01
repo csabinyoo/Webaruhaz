@@ -16,5 +16,13 @@ async function postProduct(){
           'Content-Type': 'application/json'
         },
         body: body
-      })
+    })
+    alertOk();
 }
+
+function alertOk(){
+  document.getElementById("alertOk").classList.remove('d-none');
+  setTimeout(() => {
+    document.getElementById("alertOk").classList.add('d-none');
+  },2000)
+};

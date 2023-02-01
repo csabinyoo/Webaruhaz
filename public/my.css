@@ -1,0 +1,10 @@
+#alertOk
+{
+    position: fixed;
+ 
+    top: 25%;
+    left: 25%;
+    right: 25%;
+    z-index: 1;
+    text-align: center;
+}
